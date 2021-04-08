@@ -1,17 +1,6 @@
-import React from 'react'
-import { useForm } from '../hooks/useForm';
+import React from 'react';
 
-export const BadgeForm = () => {
-    
-    const initialForm = {
-        firstName: '',
-        lastName: '',
-        jobTitle: '',
-        email: '',
-        twitter: ''
-    };
-
-    const [formValues, handleInputChange, reset] = useForm(initialForm);
+export const BadgeForm = ({formValues, handleInputChange, reset}) => {
 
     const handleOnClick = () => {
         console.log('Button Pressed');
