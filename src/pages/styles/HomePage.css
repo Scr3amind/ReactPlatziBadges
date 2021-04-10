@@ -1,0 +1,26 @@
+
+.homepage, .errorpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #212529;
+    background-image: url('../../images/stars.svg');
+}
+
+.homepage__info-container, .errorpage__info-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+.homepage__info-container img{
+    margin: 1rem 0;
+}
+
+.homepage__img, .errorpage__img {
+    min-width: 288px;
+    max-width: 600px;
+    margin: 2rem;
+}

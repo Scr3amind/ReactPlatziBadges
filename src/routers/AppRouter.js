@@ -3,22 +3,28 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  Redirect
 } from "react-router-dom";
+import { Layout } from "../components/Layout";
 import { BadgeNew } from "../pages/BadgeNew";
 import { Badges } from "../pages/Badges";
+import { HomePage } from "../pages/HomePage";
+import { NotFound } from "../pages/NotFound";
 
 
 export const AppRouter = () => {
     return (
         <Router>
-            <Switch>
-                <Route exact path="/badges" component={Badges}/>
-                <Route exact path="/badges/new" component={BadgeNew}/>
+            <Layout>
 
-                <Redirect to="/badges" />
-            </Switch>
+                <Switch>
+                    <Route exact path="/" component={HomePage}/>
+                    <Route exact path="/badges" component={Badges}/>
+                    <Route exact path="/badges/new" component={BadgeNew}/>
+                    <Route component={NotFound}/>
+                    {/* <Redirect to="/badges" /> */}
+                </Switch>
+
+            </Layout>
         </Router>
     )
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Badge } from '../components/Badge';
 import { BadgeForm } from '../components/BadgeForm';
-import { Navbar } from '../components/Navbar';
 import { useForm } from '../hooks/useForm';
 import header from '../images/badge-header.svg';
 import './styles/BadgeNew.css';
@@ -19,8 +18,8 @@ export const BadgeNew = () => {
     const [formValues, handleInputChange, reset] = useForm(initialForm);
 
     return (
-        <div>
-            <Navbar/>
+        <>
+
             <div className="BadgeNew__hero">
                 <img className="img-fluid" src={header} alt="header"/>
             </div>
@@ -42,6 +41,6 @@ export const BadgeNew = () => {
 
 
             </div>
-        </div>
+        </>
     )
 }

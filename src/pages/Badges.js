@@ -1,5 +1,4 @@
 import React from 'react';
-import { Navbar } from '../components/Navbar';
 import confHeader from '../images/badge-header.svg';
 import { BadgesList } from '../components/BadgesList';
 import './styles/Badges.css';
@@ -39,8 +38,7 @@ export const Badges = () => {
       
 
     return (
-        <div>
-            <Navbar />
+        <>
 
             <div className="Badges">
                 <div className="Badges__hero">
@@ -50,20 +48,17 @@ export const Badges = () => {
                 </div>
             </div>
 
-            <div className="Badge__container">
+            <div className="Badges__container">
 
                 <div className="Badges__buttons">
                     <Link to="/badges/new" className="btn btn-primary">New Badge</Link>
                 </div>
                 <div className="Badges__list">
-                    <div className="Badges__container">
                         <BadgesList data={data}/>
-
-                    </div>
                 </div>
 
             </div>
 
-        </div>
+        </>
     );
 }
